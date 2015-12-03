@@ -1,0 +1,10 @@
+{
+	"author": "",
+	"name": "REPLACE_ME",
+	"version": "",
+	"homepage": "",
+	"dependencies": {},
+	"devDependencies": {
+		"grunt": "~0.4.1"
+	}
+}

@@ -1,0 +1,138 @@
+html {
+    overflow-y:scroll;
+}
+
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: Arial;
+    background: #f5f8fa;
+}
+
+.container {
+    padding-top: 30px;
+}
+
+.container .jumbotron {
+    padding: 0 15px 80px 15px;
+    background: none;
+}
+
+.footer {
+    clear: both;
+}
+
+.col-lg-8, .col-lg-4 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div[class^='col-md-'] {
+    padding: 4px;
+}
+
+.panel-tweets {
+    width: 66%;
+    margin-right: 2px;
+}
+
+.panel-people {
+    width: 33%;
+    margin-left: 4px;
+    padding-bottom: 4px;
+}.tweet-item .img-avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: 6px;
+}.glyphicon-retweet {
+    margin-right: 2px;
+    color: #77b255;
+}.caption-retweet {
+    font-size: 10pt;
+}.caption-user a {
+    color: #000;
+}.caption-retweet, .caption-user, .caption-retweet a, .time-tweet a {
+    color: #8899a6;
+}
+
+.icons-tweet {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    font-size: 9pt;
+    font-weight: 700;
+}
+
+.icons-tweet .icon-retweets {
+    color: #5c913b;
+}
+
+.icons-tweet .icon-likes {
+    color: #dd2e44;
+}
+
+.icons-tweet .follow,
+.icons-tweet .follow a {
+    color: #337ab7;
+}
+
+.icons-tweet .unfollow,
+.icons-tweet .unfollow a {
+    color: #dd2e44;
+}
+
+.container-avatar {
+    margin-top: 4px;
+}
+
+.tweets-list {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 16px;
+}
+
+.img-loading {
+    height: 64px;
+    width: 64px;
+}
+
+.img-avatar, .caption-retweet a, .caption-user, .people-item .remove .glyphicon-remove,
+.people-item a, .icons-tweet .icon-follow-unfollow {
+    cursor: pointer;
+}
+
+.people-list {
+    margin-top: 4px;
+    margin-left: 2px;
+}
+
+.people-list .img-avatar {
+    height: 24px;
+    width: 24px;
+    border-radius: 3px;
+}
+
+.people-item {
+    height: 25px;
+    line-height: 25px;
+    vertical-align: middle;
+}
+
+.people-item a {
+    color: #000;
+}
+
+.people-item .remove {
+    color: #dd2e44;
+    margin-top: 2px;
+    margin-bottom: -2px;
+}
+
+.icon-follow-unfollow {
+    float: right;
+}
+
+.caption-no-followed-people {
+    padding-top: 6px; 
+    padding-bottom: 6px; 
+}
