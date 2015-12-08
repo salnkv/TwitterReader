@@ -1,0 +1,9 @@
+﻿<div class="people-item" ng-repeat="user in users" user-id="{user_id}">
+    <div class="col-md-2">
+        <img class="img-avatar" src="{{user.profile_image_url}}" alt="{{user.name}}" ng-click="showUserTimeline(user.id_str)" />
+    </div>
+    <div class="col-md-8 text-left"><span ng-click="showUserTimeline(user.id_str)"><a><strong>{{user.name}}</strong></a></span></div>
+    <div class="col-md-2 remove">
+        <span class="glyphicon glyphicon-remove" ng-click="unfollowClick(user.id_str)"></span>
+    </div>
+</div>

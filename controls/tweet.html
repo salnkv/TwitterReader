@@ -1,0 +1,26 @@
+﻿<div class="tweet-item" ng-repeat="tweet in tweets" user-id="{{tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str}}">
+    <div class="col-md-2 text-right">
+        <div class="icon-retweet-by" ng-if="tweet.retweeted_status"><span class="glyphicon glyphicon-retweet"></span></div>
+        <div class="container-avatar">
+            <img class="img-avatar" ng-src="{{tweet.retweeted_status ? tweet.retweeted_status.user.profile_image_url : tweet.user.profile_image_url}}" alt="{{tweet.retweeted_status ? tweet.retweeted_status.user.name : tweet.user.name}}"
+                 ng-click="showUserTimeline(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str);" />
+        </div>
+    </div>
+    <div class="col-md-10 text-left">
+        <div class="caption-retweet" ng-if="tweet.retweeted_status">
+            <a ng-click="showUserTimeline(tweet.user.id_str);">{{tweet.user.name}}</a> retweeted
+        </div>
+        <div class="caption-user"><span ng-click="showUserTimeline(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str);"><a><strong>{{tweet.retweeted_status ? tweet.retweeted_status.user.name : tweet.user.name}}</strong></a> @{{tweet.retweeted_status ? tweet.retweeted_status.user.screen_name : tweet.user.screen_name}}</span> - <span class="time-tweet"><a>{{timeAgo(tweet.retweeted_status ? tweet.retweeted_status.created_at : tweet.created_at)}}</a></span></div>
+        <div class="text-tweet">{{tweet.retweeted_status ? tweet.retweeted_status.text : tweet.text}}</div>
+        <div class="icons-tweet">
+            <span class="icon-retweets"><span class="glyphicon glyphicon-retweet"></span> {{tweet.retweeted_status ? tweet.retweeted_status.retweet_count : tweet.retweet_count}}</span>
+            &nbsp;
+            <span class="icon-likes"><span class="glyphicon glyphicon-heart"></span> {{tweet.retweeted_status ? tweet.retweeted_status.favorite_count : tweet.favorite_count}}</span>
+            &nbsp;
+            <span ng-switch on="isUserFollowed(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str)">
+                <span ng-switch-when="false" ng-click="followClick(tweet.retweeted_status ? tweet.retweeted_status.user : tweet.user)" class="icon-follow-unfollow follow"><span class="glyphicon glyphicon-ok"></span> <a>Follow</a></span>
+                <span ng-switch-when="true" ng-click="unfollowClick(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str)" class="icon-follow-unfollow unfollow"><span class="glyphicon glyphicon-remove"></span> <a>Unfollow</a></span>
+            </span>
+        </div>
+    </div>
+</div>
