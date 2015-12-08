@@ -136,3 +136,9 @@ div[class^='col-md-'] {
     padding-top: 6px; 
     padding-bottom: 6px; 
 }
+
+.caption-no-tweets {
+    margin-top: -6px; 
+    padding-bottom: 10px; 
+    
+}

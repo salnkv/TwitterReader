@@ -279,3 +279,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+TwitterReader/Gruntfile.js
+TwitterReader/bower.json
+TwitterReader/.bowerrc
+.nuget/packages.config
+TwitterReader/.bin/git.cmd
+TwitterReader/.bin/grunt.cmd
+TwitterReader/.bin/bower.cmd
+TwitterReader/.bin/node.cmd
+TwitterReader/.bin/npm.cmd

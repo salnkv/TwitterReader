@@ -53,6 +53,8 @@
   </PropertyGroup>
   <ItemGroup>
     <content Include=".bowerrc" />
+    <Content Include="controls\tweet.html" />
+    <Content Include="controls\user.html" />
     <Content Include="css\bootstrap-theme.css" />
     <Content Include="css\bootstrap-theme.min.css" />
     <Content Include="css\bootstrap.css" />
@@ -65,12 +67,14 @@
     <Content Include="images\default-avatar.png" />
     <Content Include="images\loading.gif" />
     <Content Include="index.html" />
+    <Content Include="js\angular.min.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\codebird.js" />
     <Content Include="js\jquery-2.1.4.js" />
     <Content Include="js\jquery-2.1.4.min.js" />
     <Content Include="js\jquery.timeago.js" />
+    <Content Include="js\ng-infinite-scroll.min.js" />
     <Content Include="js\npm.js" />
     <Content Include="js\twitter-reader.js" />
     <None Include=".bin\bower.cmd" />
