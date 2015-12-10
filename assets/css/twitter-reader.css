@@ -1,0 +1,125 @@
+body {
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: Arial;
+    background: #f5f8fa;
+}
+
+.tweet-item .img-avatar, .people-item .img-avatar {
+    border-radius: 4px;
+}
+
+.glyphicon-retweet {
+    margin-right: 2px;
+    color: #77b255;
+}
+
+.caption-retweet {
+    font-size: 10pt;
+}
+
+.caption-user a, .text-tweet, .people-item a {
+    color: #000;
+}
+
+.caption-retweet, .caption-user, .caption-retweet a, .time-tweet a {
+    color: #8899a6;
+}
+
+.icons-tweet {
+    margin-top: 8px;
+    margin-bottom: 4px;
+    margin-left: 2px;
+    font-size: 9pt;
+    font-weight: 700;
+}
+
+.icons-tweet .icon-retweets {
+    color: #5c913b;
+}
+
+.icons-tweet .icon-likes {
+    color: #dd2e44;
+}
+
+.icons-tweet .follow,
+.icons-tweet .follow a {
+    color: #337ab7;
+}
+
+.icons-tweet .unfollow,
+.icons-tweet .unfollow a {
+    color: #dd2e44;
+}
+
+.container-avatar {
+    margin-top: 4px;
+}
+
+.img-loading {
+    height: 32px;
+    margin: 16px;
+}
+
+.img-avatar, .caption-retweet a, .caption-user, .people-item .remove .glyphicon-remove,
+.people-item a, .icons-tweet .icon-follow-unfollow {
+    cursor: pointer;
+}
+
+.people-item, .tweet-item .item-inner {
+    font-size: 11pt;
+}
+
+.people-item .remove {
+    color: #dd2e44;
+    margin-top: 2px;
+    margin-bottom: -12px;
+}
+
+.icon-follow-unfollow {
+    float: right;
+}
+
+.caption-no-followed-people {
+    padding: 12px;
+    background: #fff;
+}
+
+.caption-no-tweets {
+    padding: 0 12px 12px 12px;
+}
+
+.item-content .item-inner {
+    padding-bottom: 0;
+}
+
+.item-content .item-media {
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom: 1px solid #c8c7cc;
+}
+
+li:last-child .item-content .item-media {
+    border-bottom: transparent;
+}
+
+img.navbar-brand {
+    margin-top: 16px;
+    height: 32px;
+}
+
+.app-sidebar-closed nav .main-navigation-menu li .item-inner {
+    display: none;
+}
+
+.tweet-item .item-media, .tweet-item .item-inner {
+    border-bottom: none;
+}
+
+.people-item .glyphicon {
+    top: 3px;
+}
+
+#app > footer {
+    position: fixed;
+}
