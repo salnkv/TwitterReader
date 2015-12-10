@@ -17,8 +17,8 @@ app.controller("tweetsController", ["$scope", "tweetsService", "usersService", f
     $scope.tweets = tweetsService.getTweets("search");
     $scope.users = usersService.getUsers();
     $scope.query = "";
-
-    $scope.loadMoreTweets = function() {
+    
+    $scope.loadMoreTweets = function () {
         if ($(window).scrollTop() == $(document).height() - $(window).height()) {
             tweetsService.getTweets();
         }
@@ -196,7 +196,6 @@ app.service("usersService", ["$q", function ($q) {
             var userIds = JSON.parse(localStorage['userIds']);
 
             usersLoading.busy = true;
-
             getUsersRequest(userIds).then(function(reply) {
                 if (users.length > 0) {
                     for (var i = 0; i < reply.length; i++)
