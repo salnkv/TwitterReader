@@ -1,14 +1,18 @@
-﻿<div class="tweet-item" ng-repeat="tweet in tweets" user-id="{{tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str}}">
-    <div class="col-md-2 text-right">
-        <div class="icon-retweet-by" ng-if="tweet.retweeted_status"><span class="glyphicon glyphicon-retweet"></span></div>
+﻿<div class="tweet-item item-content" ng-repeat="tweet in tweets" user-id="{{tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str}}">
+    <div class="item-media text-right">
+        <div class="icon-retweet-by">
+            <span class="glyphicon glyphicon-retweet" ng-if="tweet.retweeted_status"></span>
+            <span ng-if="!tweet.retweeted_status">&nbsp;</span>
+        </div>
         <div class="container-avatar">
             <img class="img-avatar" ng-src="{{tweet.retweeted_status ? tweet.retweeted_status.user.profile_image_url : tweet.user.profile_image_url}}" alt="{{tweet.retweeted_status ? tweet.retweeted_status.user.name : tweet.user.name}}"
-                 ng-click="showUserTimeline(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str);" />
+                 ng-click="showUserTimeline(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str);"/>
         </div>
     </div>
-    <div class="col-md-10 text-left">
-        <div class="caption-retweet" ng-if="tweet.retweeted_status">
-            <a ng-click="showUserTimeline(tweet.user.id_str);">{{tweet.user.name}}</a> retweeted
+    <div class="item-inner text-left">
+        <div class="caption-retweet">
+            <span ng-if="tweet.retweeted_status"><a ng-click="showUserTimeline(tweet.user.id_str);">{{tweet.user.name}}</a> retweeted</span>
+            <span ng-if="!tweet.retweeted_status">&nbsp;</span>
         </div>
         <div class="caption-user"><span ng-click="showUserTimeline(tweet.retweeted_status ? tweet.retweeted_status.user.id_str : tweet.user.id_str);"><a><strong>{{tweet.retweeted_status ? tweet.retweeted_status.user.name : tweet.user.name}}</strong></a> @{{tweet.retweeted_status ? tweet.retweeted_status.user.screen_name : tweet.user.screen_name}}</span> - <span class="time-tweet"><a>{{timeAgo(tweet.retweeted_status ? tweet.retweeted_status.created_at : tweet.created_at)}}</a></span></div>
         <div class="text-tweet">{{tweet.retweeted_status ? tweet.retweeted_status.text : tweet.text}}</div>
